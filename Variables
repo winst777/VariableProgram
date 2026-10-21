@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.text.DecimalFormat;
+//import java.math.RoundingMode;
+public class Variable
+{
+    public static void main(String[]args)
+    {
+System.out.println("Please enter your first name");
+        Scanner sc = new Scanner(System.in);
+        String fname = sc.nextLine();
+System.out.println("Please enter your competition classification");
+        String classify = sc.next();
+System.out.println("Please enter your competitor number");
+        int cnumber = sc.nextInt();
+System.out.println("Please enter your measurement in meters (accurate to 3 places)");
+        float num = sc.nextFloat();
+DecimalFormat df = new DecimalFormat("#.###");
+//df.setRoundingMode(RoundingMode.CEILING);
+System.out.println("The distance travelled by " + fname + ", competitor number " + cnumber + " in class " + classify + "," + " was " + df.format(num) + " meters in the shot put.");
+    }
+}
